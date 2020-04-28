@@ -1,5 +1,3 @@
 #!/usr/bin/python3
-x = 97
-while x <= 122:
-    print(chr(x), end='')
-    x = x + 1
+for alpha in range(97, 123):
+    print(chr(alpha), end='')

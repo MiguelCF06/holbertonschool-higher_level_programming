@@ -6,34 +6,28 @@ if __name__ == "__main__":
     
     args = len(sys.argv)
 
-    if (args - 1 != 3):
+    if (args-1 != 3):
         print("Usage: ./100-my_calculator.py <a> <operator> <b>")
         sys.exit(1)
-
-    elif (sys.argv[2] == "+"):
-        a = int(sys.argv[1])
-        b = int(sys.argv[3])
-        res = add(a, b)
-        print("{} + {} = {}".format(a, b, res))
-
-    elif (sys.argv[2] == "-"):
-        a = int(sys.argv[1])
-        b = int(sys.argv[3])
-        res = sub(a, b)
-        print("{} - {} = {}".format(a, b, res))
-
-    elif (sys.argv[2] == "*"):
-        a = int(sys.argv[1])
-        b = int(sys.argv[3])
-        res = mul(a, b)
-        print("{} * {} = {}".format(a, b, res))
-
-    elif (sys.argv[2] == "/"):
-        a = int(sys.argv[1])
-        b = int(sys.argv[3])
-        res = div(a, b)
-        print("{} / {} = {}".format(a, b, res))
-
     else:
-        print("Unknown operator. Available operators: +, -, * and /")
-        sys.exit(1)
+        a = int(sys.argv[1])
+        b = int(sys.argv[3])
+        if (sys.argv[2] == "+"):
+            res = add(a, b)
+            print("{} + {} = {}".format(a, b, res))
+
+        elif (sys.argv[2] == "-"):
+            res = sub(a, b)
+            print("{} - {} = {}".format(a, b, res))
+
+        elif (sys.argv[2] == "*"):
+            res = mul(a, b)
+            print("{} * {} = {}".format(a, b, res))
+            
+        elif (sys.argv[2] == "/"):
+            res = div(a, b)
+            print("{} / {} = {}".format(a, b, res))
+
+        else:
+            print("Unknown operator. Available operators: +, -, * and /")
+            sys.exit(1)

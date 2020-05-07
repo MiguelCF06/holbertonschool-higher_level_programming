@@ -1,4 +1,21 @@
 #!/usr/bin/python3
+def valueRoman(r):
+    if r == 'I':
+        return 1
+    if r == 'V':
+        return 5
+    if r == 'X':
+        return 10
+    if r == 'L':
+        return 50
+    if r == 'C':
+        return 100
+    if r == 'D':
+        return 500
+    if r == 'M':
+        return 1000
+    return -1
+
 def roman_to_int(roman_string):
     if type(roman_string) == str:
         res = 0
@@ -21,19 +38,3 @@ def roman_to_int(roman_string):
                 x += 1
         return res
     return 0
-def valueRoman(r):
-    if r == 'I':
-        return 1
-    if r == 'V':
-        return 5
-    if r == 'X':
-        return 10
-    if r == 'L':
-        return 50
-    if r == 'C':
-        return 100
-    if r == 'D':
-        return 500
-    if r == 'M':
-        return 1000
-    return -1

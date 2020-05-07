@@ -4,9 +4,9 @@ def roman_to_int(roman_string):
         res = 0
         x = 0
         while x < len(roman_string):
-            simb1 = valueR(roman_string[x])
+            simb1 = valueRoman(roman_string[x])
             if x + 1 < len(roman_string):
-                simb2 = valueR(roman_string[x + 1])
+                simb2 = valueRoman(roman_string[x + 1])
                 if simb1 >= simb2:
                     res = res + simb1
                     x = x + 1
@@ -19,7 +19,7 @@ def roman_to_int(roman_string):
         return res
     return 0
 
-def valueR(r):
+def valueRoman(r):
     if (r == 'I'):
         return 1
     if (r == 'V'):

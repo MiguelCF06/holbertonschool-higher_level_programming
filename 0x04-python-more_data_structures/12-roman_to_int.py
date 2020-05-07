@@ -1,12 +1,15 @@
 #!/usr/bin/python3
 def roman_to_int(roman_string):
-    if type(roman_string) == str or roman_string not is None:
+    if type(roman_string) == str:
         res = 0
         x = 0
+
         while x < len(roman_string):
             simb1 = valueRoman(roman_string[x])
+
             if x+1 < len(roman_string):
                 simb2 = valueRoman(roman_string[x+1])
+
                 if simb1 >= simb2:
                     res = res + simb1
                     x += 1

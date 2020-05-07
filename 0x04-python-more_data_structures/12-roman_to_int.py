@@ -17,8 +17,8 @@ def roman_to_int(roman_string):
                 res = res + simb1
                 x = x + 1
         return res
-    return 0
 
+    return 0
 def valueRoman(r):
     if (r == 'I'):
         return 1

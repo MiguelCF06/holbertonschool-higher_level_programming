@@ -6,7 +6,7 @@ def roman_to_int(roman_string):
         while x < len(roman_string):
             simb1 = valueR(roman_string[x])
             if x + 1 < len(roman_string):
-                simb2 = valueR(roman_string[x+1])
+                simb2 = valueR(roman_string[x + 1])
                 if simb1 >= simb2:
                     res = res + simb1
                     x = x + 1

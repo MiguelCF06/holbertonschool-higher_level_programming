@@ -1,38 +1,15 @@
 #!/usr/bin/python3
-def valueRoman(r):
-    if r == 'I':
-        return 1
-    if r == 'V':
-        return 5
-    if r == 'X':
-        return 10
-    if r == 'L':
-        return 50
-    if r == 'C':
-        return 100
-    if r == 'D':
-        return 500
-    if r == 'M':
-        return 1000
-    return -1
-
 def roman_to_int(roman_string):
+    value = {"M": 1000, "D": 500, "C": 100, "L": 50, "X": 10, "V": 5, "I": 1}
     if type(roman_string) == str:
+        prev = 0
         res = 0
-        x = 0
-        while x < len(roman_string):
-            simb1 = valueRoman(roman_string[x])
-            if (x+1) < len(roman_string):
-                simb2 = valueRoman(roman_string[x+1])
-
-                if simb1 >= simb2:
-                    res = res + simb1
-                    x += 1
-                else:
-                    res = res + simb2 - simb1
-                    x = x + 2
+        n = len(roman_string)
+        for x in range(n-1, -1, -1):
+            if value[roman_string[x]] >= prev:
+                res += value[roman_string[x]]
             else:
-                res = res + simb1
-                x += 1
+                res -= value[roman_string[x]]
+            prev = value[roman_string[x]]
         return res
     return 0

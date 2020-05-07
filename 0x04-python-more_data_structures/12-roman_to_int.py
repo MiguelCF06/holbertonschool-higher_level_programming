@@ -32,7 +32,7 @@ def roman_to_int(roman_string):
                     x += 1
                 else:
                     res = res + simb2 - simb1
-                    x=x+2
+                    x = x + 2
             else:
                 res = res + simb1
                 x += 1

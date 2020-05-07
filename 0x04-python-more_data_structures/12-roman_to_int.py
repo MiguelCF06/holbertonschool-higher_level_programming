@@ -9,13 +9,13 @@ def roman_to_int(roman_string):
                 simb2 = valueRoman(roman_string[x + 1])
                 if simb1 >= simb2:
                     res = res + simb1
-                    x = x + 1
+                    x += 1
                 else:
                     res = res + simb2 - simb1
                     x = x + 2
             else:
                 res = res + simb1
-                x = x + 1
+                x += 1
         return res
     return 0
 def valueRoman(r):

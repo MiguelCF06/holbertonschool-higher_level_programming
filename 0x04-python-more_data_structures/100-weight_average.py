@@ -8,4 +8,3 @@ def weight_average(my_list=[]):
             numSum += tuple[1]
         return (numMul / numSum)
     return 0
-    

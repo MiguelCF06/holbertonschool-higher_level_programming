@@ -1,5 +1,7 @@
 #!/usr/bin/python3
 """ Defining a class Square """
+
+
 class Square:
     """ The square class
 
@@ -10,6 +12,7 @@ class Square:
         """ Initialize the square
         Arguments:
               size : side of a side of the square
+
         Return : None
         """
         if type(size) is int:

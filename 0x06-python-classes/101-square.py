@@ -110,8 +110,8 @@ class Square:
         elif self.__position[1] > 0:
             for newline in range(self.__position[1]):
                 string += "\n"
-            for count in range(self.size):
-                string += self.__position[0] * " "
-                string += self.size * "#"
-                string += '\n'
-            return string[:-1]
+        for count in range(self.size):
+            string += self.__position[0] * " "
+            string += self.size * "#"
+            string += '\n'
+        return string[:-1]

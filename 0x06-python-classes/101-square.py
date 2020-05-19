@@ -1,15 +1,20 @@
 #!/usr/bin/python3
 """ Defining a class Square """
+
+
 class Square:
     """ The square class
+
     Attributes:
     __size : size of a side of the square
     """
     def __init__(self, size=0, position=(0, 0)):
         """ Initialize the square
+
         Arguments:
              size : side of a side of the square
              position : the of the square
+
         Return : None
         """
         self.__size = size
@@ -26,8 +31,10 @@ class Square:
     @size.setter
     def size(self, value):
         """setter of __size
+
         Args:
             value: the size of a size of the square
+
         Returns: None
         """
         if type(value) is int:
@@ -41,6 +48,7 @@ class Square:
     @property
     def position(self):
         """getter of __position
+
         Returns:
             The position of the square in 2D space
         """
@@ -49,10 +57,11 @@ class Square:
     @size.setter
     def position(self, value):
         """setter of __position
+
         Args:
             value (tuple): position of the square in 2D space
-        Returns:
-            None
+
+        Returns: None
         """
         if type(value) is not tuple or len(value) < 2 or \
            len(value) != 2 or \
@@ -75,6 +84,7 @@ class Square:
         
         """ Public method that prints the size of the square
         with # and spaces
+
         Return: none
         """
         if self.__size == 0:
@@ -93,6 +103,7 @@ class Square:
 
     def __str__(self):
         """String representation of a Square instance
+
         Returns:
             Formatted string representing the square
         """

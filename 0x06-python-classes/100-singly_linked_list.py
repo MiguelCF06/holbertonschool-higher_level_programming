@@ -97,7 +97,6 @@ class SinglyLinkedList:
         """
         new_node = Node(value)
         temporal = self.__head
-
         if temporal is None or temporal.data >= value:
             if temporal:
                 new_node.next_node = temporal

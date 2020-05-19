@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 """ Defined a class square """
 
+
 class Square:
     """ The square class 
 
@@ -9,6 +10,7 @@ class Square:
     """
     def __init__(self, size):
         """ Initialize the square
+        
         Arguments:
                  size : size of a side of the square
 

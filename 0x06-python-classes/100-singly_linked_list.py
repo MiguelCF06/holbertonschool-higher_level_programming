@@ -34,7 +34,7 @@ class Node:
     def data(self, value):
         """setter of __data
 
-        Arguments:            
+        Arguments:
               value (int): data stored insite the node
 
         Returns: None
@@ -78,10 +78,11 @@ class SinglyLinkedList:
     """Represents a single linked list
 
     Attributes:
-    __head (Node): head of the linked list
+         __head (Node): head of the linked list
     """
     def __init__(self):
         """Initializes the linked list
+
         Returns: None 
         """
         self.__head = None

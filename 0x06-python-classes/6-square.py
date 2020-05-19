@@ -1,16 +1,16 @@
 #!/usr/bin/python3
-""" Defining a class Square """
+"""Defining a class Square """
 
 
 class Square:
-    """ The square class
+    """The square class
 
     Attributes:
-    __size : size of a side of the square
-    __position : position of the square
+         __size : size of a side of the square
+         __position : position of the square
     """
     def __init__(self, size=0, position=(0, 0)):
-        """ Initialize the square
+        """Initialize the square
 
         Arguments:
              size : side of a side of the square
@@ -23,7 +23,7 @@ class Square:
 
     @property
     def size(self):
-        """ Getter of the __size
+        """getter of the __size
 
         Returns: The size of the square
         """
@@ -50,8 +50,7 @@ class Square:
     def position(self):
         """getter of __position
 
-        Returns:
-            The position of the square in 2D space
+        Returns: The position of the square in 2D space
         """
         return self.__position
 
@@ -62,8 +61,7 @@ class Square:
         Args:
             value (tuple): position of the square in 2D space
 
-        Returns:
-            None
+        Returns: None
         """
         if type(value) is not tuple or len(value) != 2 or \
            type(value[0]) is not int or value[0] < 0 or \
@@ -71,7 +69,6 @@ class Square:
             raise TypeError("position must be a tuple of 2 positive integers")
         else:
             self.__position = value
-
 
     def area(self):
         """ Public method that finds the area

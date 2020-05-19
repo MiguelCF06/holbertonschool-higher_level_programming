@@ -75,18 +75,16 @@ class Node:
         return str(self.__data)
 
 class SinglyLinkedList:
-     """Represents a single linked list
+    """Represents a single linked list
 
     Attributes:
-        __head (Node): head of the linked list
+    __head (Node): head of the linked list
     """
     def __init__(self):
         """Initializes the linked list
-
-        Returns: None
+        Returns: None 
         """
         self.__head = None
-
 
     def sorted_insert(self, value):
         """ inserts a new Node instance into the correct sorted position

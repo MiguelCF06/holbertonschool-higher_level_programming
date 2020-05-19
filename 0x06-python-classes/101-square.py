@@ -74,13 +74,12 @@ class Square:
     def area(self):
         """ Public method that finds the area
         of the square
-        
+
         Return: The area of the square
         """
-        return self.__size * sef.__size
+        return self.__size * self.__size
 
     def my_print(self):
-        
         """ Public method that prints the size of the square
         with # and spaces
 
@@ -112,8 +111,8 @@ class Square:
         elif self.__position[1] > 0:
             for newline in range(self.__position[1]):
                 string += "\n"
-        for count in range(self.size):
-            string += self.__position[0] * " "
-            string += self.size * "#"
-            string += '\n'
-        return string[:-1]
+            for count in range(self.size):
+                string += self.__position[0] * " "
+                string += self.size * "#"
+                string += '\n'
+            return string[:-1]

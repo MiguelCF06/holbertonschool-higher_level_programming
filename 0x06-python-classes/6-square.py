@@ -72,17 +72,21 @@ class Square:
         return self.__size * sef.__size
 
     def my_print(self):
-         """ Public method that prints the size of the square
+        
+        """ Public method that prints the size of the square
         with # and spaces
         Return: none
         """
         if self.__size == 0:
             print()
+            return
         else:
+            if self.__position[0] >= 0 and self.__position[1] >= 0:
+                for lines in range(self.__position[1]):
+                    print()
             for rows in range(self.__size):
-                if self.__position[1] >= 0:
-                    for spaces in range(self.__position[0]):
-                        print(" ", end="")
+                for spaces in range(self.__position[0]):
+                    print(" ", end="")
                 for cols in range(self.__size):
                     print("#", end="")
                 print()

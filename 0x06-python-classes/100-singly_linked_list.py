@@ -1,9 +1,9 @@
 #!/usr/bin/python3
-"""Write a Node class for a singly linked list"""
+""" Write a Node class for a singly linked list """
 
 
 class Node:
-    """Represents a node in a singly linked list
+    """ Represents a node in a singly linked list
 
     Attributes:
         __data (int): data stored inside the node

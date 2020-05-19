@@ -7,6 +7,7 @@ class Square:
 
     Attributes:
     __size : size of a side of the square
+    __position : position of the square
     """
     def __init__(self, size=0, position=(0, 0)):
         """ Initialize the square
@@ -77,7 +78,7 @@ class Square:
         """ Public method that finds the area
         of the square
 
-        Return: The area of the square
+        Returns: The area of the square
         """
         return self.__size * sef.__size
 
@@ -90,13 +91,8 @@ class Square:
         if self.__size == 0:
             print()
             return
-        else:
-            if self.__position[0] >= 0 and self.__position[1] >= 0:
-                for lines in range(self.__position[1]):
-                    print()
-            for rows in range(self.__size):
-                for spaces in range(self.__position[0]):
-                    print(" ", end="")
-                for cols in range(self.__size):
-                    print("#", end="")
-                print()
+        for i in range(self.__position[1]):
+            print()
+        for j in range(self.__size):
+            print("".join([" " for k in range(self.__position[0])]), end="")
+            print("".join(["#" for l in range(self.__size)]))

@@ -9,7 +9,7 @@ class Square:
     __size : size of a side of the square
     """
     def __init__(self, size=0, position=(0, 0)):
-        """ Initialize the square
+        """Initialize the square
 
         Arguments:
              size : side of a side of the square
@@ -22,8 +22,8 @@ class Square:
 
     @property
     def size(self):
-        """ Getter of the __size
-        
+        """getter of the __size
+
         Return: The size of the square
         """
         return self.__size
@@ -54,7 +54,7 @@ class Square:
         """
         return self.__position
 
-    @size.setter
+    @position.setter
     def position(self, value):
         """setter of __position
 
@@ -70,7 +70,6 @@ class Square:
             raise TypeError("position must be a tuple of 2 positive integers")
         else:
             self.__position = value
-
 
     def area(self):
         """ Public method that finds the area

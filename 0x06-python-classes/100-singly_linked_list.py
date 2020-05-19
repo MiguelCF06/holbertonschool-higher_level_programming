@@ -57,7 +57,7 @@ class Node:
     def next_node(self, value):
         """setter of __next_node
 
-        Args:
+        Arguments:
             value (Node): next node in the linked list
 
         Returns: None
@@ -90,7 +90,7 @@ class SinglyLinkedList:
     def sorted_insert(self, value):
         """inserts a new Node instance into the correct sorted position
 
-        Args:
+        Arguments:
             value (int): data stored inside the new node
 
         Returns: None

@@ -83,12 +83,12 @@ class SinglyLinkedList:
     def __init__(self):
         """Initializes the linked list
 
-        Returns: None 
+        Returns: None
         """
         self.__head = None
 
     def sorted_insert(self, value):
-        """ inserts a new Node instance into the correct sorted position
+        """inserts a new Node instance into the correct sorted position
 
         Args:
             value (int): data stored inside the new node

@@ -19,6 +19,35 @@ Importing the function from the module:
 >>> add_integer(-5)
 93
 
+>>> [add_integer(i, i ** 2) for i in range(4)]
+[0, 2, 6, 12]
+
+>>> add_integer(1.2, 98.1)
+99
+
+>>> add_integer(2, float("inf"))
+Traceback (most recent call last):
+...
+OverflowError: cannot convert float infinity to integer
+
+>>> add_integer(9999999999999998, 1)
+9999999999999999
+
+>>> add_integer([23], 45)
+Traceback (most recent call last):
+...
+TypeError: a must be an integer
+
+>>> add_integer(23, True)
+Traceback (most recent call last):
+...
+TypeError: a must be an integer
+
+>>> add_integer(23, 45, 67)
+Traceback (most recent call last):
+...
+TypeError: add_integer() takes 2 positional arguments but 3 were given
+
 >>> add_integer("a", 100)
 Traceback (most recent call last):
 ...

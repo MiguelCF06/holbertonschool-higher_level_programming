@@ -5,53 +5,53 @@ Importing the function from the module:
 	  >>> text_indentation = __import__('5-text_indentation').text_indentation
 
 >>> text_indentation("Text for example. Another part?")
-    Text for example.
-    <BLANKLINE>
-    Another part?
-    <BLANKLINE>
+Text for example.
+<BLANKLINE>
+Another part?
+<BLANKLINE>
 
 >>> text_indentation("Hi", "What?")
-    Traceback (most recent call last):
-    ...
-    TypeError: text_indentation() takes 1 positional argument but 2 were given
+Traceback (most recent call last):
+...
+TypeError: text_indentation() takes 1 positional argument but 2 were given
 
 >>> text_indentation()
-    Traceback (most recent call last):
-    ...
-    TypeError: text_indentation() missing 1 required positional argument: 'text'
+Traceback (most recent call last):
+...
+TypeError: text_indentation() missing 1 required positional argument: 'text'
 
 >>> text_indentation(None)
-    Traceback (most recent call last):
-    ...
-    TypeError: text must be a string
+Traceback (most recent call last):
+...
+TypeError: text must be a string
 
 >>> text_indentation(235)
-    Traceback (most recent call last):
-    ...
-    TypeError: text must be a string
+Traceback (most recent call last):
+...
+TypeError: text must be a string
 
 >>> text_indentation("     What happen?  ")
-    What happen?
-    <BLANKLINE>
+What happen?
+<BLANKLINE>
 
 >>> text_indentation("? : .")
-    ?
-    <BLANKLINE>
-    :
-    <BLANKLINE>
-    .
-    <BLANKLINE>
+?
+<BLANKLINE>
+:
+<BLANKLINE>
+.
+<BLANKLINE>
 
 >>> text_indentation("\nHow are you?")
-    <BLANKLINE>
-    How are you?
-    <BLANKLINE>
+<BLANKLINE>
+How are you?
+<BLANKLINE>
 
 >>> text_indentation("Go there.\n")
-    Go there.
-    <BLANKLINE>
-    <BLANKLINE>
+Go there.
+<BLANKLINE>
+<BLANKLINE>
 
 >>> text_indentation(" . ")
-     .
-    <BLANKLINE>
+.
+<BLANKLINE>

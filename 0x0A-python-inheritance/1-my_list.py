@@ -6,6 +6,8 @@ class MyList(list):
     way
     """
     def print_sorted(self):
+        if len(self) == 0:
+            print(self)
         for num in self:
             if isinstance(num, int):
                 print(sorted(self))

@@ -8,6 +8,7 @@ class MyList(list):
     def print_sorted(self):
         if len(self) == 0:
             print(self)
+            return
         for num in self:
             if isinstance(num, int):
                 print(sorted(self))

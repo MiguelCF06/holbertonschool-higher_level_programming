@@ -66,3 +66,13 @@ TypeError: string must be an integer
 Traceback (most recent call last):
 ...
 TypeError: bool must be an integer
+
+>>> b.integer_validator("complex", complex(1, 1))
+Traceback (most recent call last):
+...
+TypeError: complex must be an integer
+
+>>> b.integer_validator("tuple", (1, 2))
+Traceback (most recent call last):
+...
+TypeError: tuple must be an integer

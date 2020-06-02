@@ -1,0 +1,46 @@
+#doctest-1-my_list.py
+""" Test Driven Development """
+
+Importing the class from the module:
+	  >>> MyList = __import__('1-my_list').MyList
+
+>>> issubclass(MyList, list)
+True
+
+>>> list = MyList()
+>>> list.print_sorted()
+[]
+
+>>> list.append(18)
+>>> list.append(14)
+>>> list.append(16)
+>>> print(list)
+[18, 14, 16]
+
+>>> list.print_sorted()
+[14, 16, 18]
+
+>>> list.append(-12)
+>>> list.append(-1)
+>>> print(list)
+[18, 14, 16, -12, -1]
+>>> list.print_sorted()
+[-12, -1, 14, 16, 18]
+>>> print(list)
+[18, 14, 16, -12, -1]
+
+>>> list.print_sorted(1)
+Traceback (most recent call last):
+...
+TypeError: print_sorted() takes 1 positional argument but 2 were given
+
+>>> list2 = MyList()
+>>> list2.append(5)
+>>> list2.append(4)
+>>> list2.append(3)
+>>> print(list2)
+[5, 4, 3]
+>>> list2.print_sorted()
+[3, 4, 5]
+>>> print(list2)
+[5, 4, 3]

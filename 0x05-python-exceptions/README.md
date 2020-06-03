@@ -42,11 +42,7 @@ What you should learn from this project:
 * Write a function that raises a name exception with a message.
 
 
-### [7. Safe integer print with error message](./100-safe_print_integer_err.py)
-* Write a function that prints an integer.
-
-
-### [8. ByteCode -> Python #4](./102-magic_calculation.py)
+### [7. ByteCode -> Python #4](./102-magic_calculation.py)
 * Write the Python function def magic_calculation(a, b): that does exactly the same as the following Python bytecode:
 
 

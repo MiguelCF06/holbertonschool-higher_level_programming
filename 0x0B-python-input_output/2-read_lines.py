@@ -3,6 +3,7 @@
 Reads n lines of a text file
 """
 
+
 def read_lines(filename="", nb_lines=0):
     """ Open the file and print n lines """
     with open(filename, "r") as f:

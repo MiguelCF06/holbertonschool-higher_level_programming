@@ -78,6 +78,8 @@ What you should learn from this project:
 ### [14. Pascal's Triangle](./14-pascal_triangle.py)
 * Technical interview preparation: 
 
+### [15. Search and Update](./100-append_after.py)
+* Write a function that inserts a line of text to a file, after each line containing a specific string:
 ---
 
 ## Author

@@ -10,6 +10,7 @@ from models.base import Base
 class Rectangle(Base):
     """ A Rectangle class that inherits from Base """
     def __init__(self, width, height, x=0, y=0, id=None):
+        """ Initialize variables """
         self.width = width
         self.height = height
         self.x = x
@@ -91,9 +92,8 @@ class Rectangle(Base):
 
     def __str__(self):
         """ String representation """
-        return "[Rectangle] ({}) {}/{} - {}/{}".format(self.id, self.__x,
-                                                       self.__y, self.__width,
-                                                       self.__height)
+        return "[Rectangle] ({}) {}/{} - {}/{}".format(self.id, self.__x, self.__y,
+                                                self.__width, self.__height)
 
     def update(self, *args, **kwargs):
         """ Assigns an argument to each attribute """

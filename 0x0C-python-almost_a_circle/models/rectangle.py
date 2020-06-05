@@ -80,7 +80,11 @@ class Rectangle(Base):
         """ Method that prints in stdout the rectangle instance with
         char # """
         rep = "#"
+        for space in range(self.__y):
+            print()
         for rows in range(self.__height):
+            for space in range(self.__x):
+                print(" ",end="")
             for cols in range(self.__width):
                 print(rep, end="")
             print()

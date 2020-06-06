@@ -1,5 +1,5 @@
 # Almost a Circle Python
-## Objective:bulb:
+## Objectives:bulb:
 This project is a review of everything learned in Python up until 09/13/17:
 * Import
 * Exceptions

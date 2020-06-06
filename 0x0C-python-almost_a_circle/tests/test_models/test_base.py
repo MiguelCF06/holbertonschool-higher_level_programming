@@ -6,8 +6,27 @@ All the tests for the Base class
 
 import unittest
 import json
+import pep8
 from models import base
 Base = base.Base
+
+
+class TestDocs(unittest.TestCase):
+    """ Test for check all the documentation """
+    def testDocString(self):
+        """Tests for the module docstring"""
+        self.assertTrue(len(base.__doc__) >= 1)
+
+    def test_ClassDocstring(self):
+        """Tests for the Base class docstring"""
+        self.assertTrue(len(Base.__doc__) >= 1)
+
+    def test_pep8_Test_base(self):
+        """Test that tests/test_models/test_base.py conforms to PEP8."""
+        pep8style = pep8.StyleGuide(quiet=True)
+        result = pep8style.check_files(['tests/test_models/test_base.py'])
+        self.assertEqual(result.total_errors, 0,
+                         "Found code style errors (and warnings).")
 
 
 class TestBase(unittest.TestCase):

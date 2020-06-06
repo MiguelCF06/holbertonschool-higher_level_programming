@@ -59,3 +59,18 @@ class Base:
             myDummy = cls(1)
         myDummy.update(**dictionary)
         return myDummy
+
+
+    @classmethod
+    def load_from_file(cls):
+        """ Return a list of instances """
+        filename = cls.__name__ + ".json"
+        listOfInst = []
+        try:
+            with open(filename, "r") as f:
+                listOfInst = cls.from_json_string(f.read())
+            for num, val in enumerate(listOfInst):
+                listOfInst[num] = cls.create(**listOfInst[num])
+        except:
+            pass
+        return listOfInst

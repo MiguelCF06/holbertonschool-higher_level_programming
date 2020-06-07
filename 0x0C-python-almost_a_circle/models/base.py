@@ -4,6 +4,7 @@ Class content
 """
 
 
+import turtle
 import json
 
 
@@ -22,10 +23,9 @@ class Base:
     def to_json_string(list_dictionaries):
         """ Returns the JSON string representation of
         list__dictionaries """
-        if len(list_dictionaries):
-            return json.dumps(list_dictionaries)
-        else:
-            return []
+        if list_dictionaries is None:
+            list_dictionaries = []
+        return json.dumps(list_dictionaries)
 
     @classmethod
     def save_to_file(cls, list_objs):
@@ -74,3 +74,38 @@ class Base:
         except:
             pass
         return listOfInst
+
+
+    def draw(list_rectangles, list_squares):
+        """ Opens a window and draws all the
+        rectangles and squares """
+        tur = turtle.Turtle()
+        tur.shape("turtle")
+        tur.color("red")
+        tur.screen.bgcolor("black")
+        for rec in list_rectangles:
+            tur.st()
+            tur.up()
+            if rec.x != 0 or rec.y != 0:
+                tur.setpos(rec.x * 2 - 150, rec.y * 2 - 150)
+            else:
+                tur.setpos(-200, 0)
+            tur.down()
+            for times in range(2):
+                tur.forward(rec.width)
+                tur.left(90)
+                tur.forward(rec.height)
+                tur.left(90)
+            tur.ht()
+
+        for square in list_squares:
+            tur.st()
+            tur.up()
+            tur.setpos(square.x, square.y)
+            tur.down()
+            for times in range(2):
+                tur.forward(square.width)
+                tur.left(90)
+                tur.forward(square.height)
+                tur.left(90)
+            tur.ht()

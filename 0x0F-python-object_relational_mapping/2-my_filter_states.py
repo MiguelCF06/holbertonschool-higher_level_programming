@@ -15,6 +15,7 @@ if __name__ == "__main__":
     id ASC".format(sys.argv[4]))
     match = cur.fetchall()
     for name in match:
-        print(name)
+        if name[1] == sys.argv[4]:
+            print(name)
     cur.close()
     db.close()

@@ -6,9 +6,9 @@ with the letter as a parameter.
 
 import requests
 import sys
-url = "http://19f003bb820b.22216bed.hbtn-cod.io:5000/search_user"
 
 if __name__ == "__main__":
+    url = "http://19f003bb820b.22216bed.hbtn-cod.io:5000/search_user"
     if len(sys.argv) == 2:
         q = sys.argv[1]
     else:

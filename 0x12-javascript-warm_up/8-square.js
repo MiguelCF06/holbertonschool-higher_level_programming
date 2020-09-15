@@ -1,6 +1,5 @@
 #!/usr/bin/node
 let i;
-const square = [];
 const arg = Number(process.argv[2]);
 
 if (!arg) {

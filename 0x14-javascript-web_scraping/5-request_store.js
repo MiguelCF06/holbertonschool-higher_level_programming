@@ -7,10 +7,6 @@ request(url, { json: true }, (err, res, body) => {
   if (err) {
     console.log(err);
   } else {
-    fs.writeFile(fileToStore, body, function (err) {
-      if (err) {
-        console.log(err);
-      }
-    });
+    fs.writeFile(fileToStore, body, 'utf-8');
   }
 });
